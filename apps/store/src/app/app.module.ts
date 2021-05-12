@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { StoreSharedUiModule } from '../../../../libs/store/shared-ui/src';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     MatCardModule,
+    StoreSharedUiModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
