@@ -1,8 +1,4 @@
 {
-  "npmScope": "bg-hoard",
-  "affected": {
-    "defaultBase": "main"
-  },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
@@ -10,6 +6,10 @@
     },
     ".eslintrc.json": "*"
   },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "npmScope": "bg-hoard",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
@@ -33,6 +33,9 @@
       "tags": []
     },
     "store-feature-game-detail": {
+      "tags": []
+    },
+    "api": {
       "tags": []
     }
   }
