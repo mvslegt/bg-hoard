@@ -1,6 +1,6 @@
 import { formatFiles, Tree, updateJson } from '@nrwl/devkit';
 
-function sortProjects(host: Tree) {
+function sortWorkspaceProjects(host: Tree) {
   updateJson(host, 'workspace.json', (json) => {
     const sortedProjects = Object.keys(json.projects)
       .sort()
@@ -13,7 +13,21 @@ function sortProjects(host: Tree) {
   });
 }
 
+function sortProjectsPaths(host: Tree) {
+  updateJson(host, 'tsconfig.base.json', (json) => {
+    const sortedPaths = Object.keys(json.compilerOptions.paths)
+      .sort()
+      .reduce((obj, key) => {
+        obj[key] = json.compilerOptions.paths[key];
+        return obj;
+      }, {});
+    json.compilerOptions.paths = sortedPaths;
+    return json;
+  });
+}
+
 export default async function (host: Tree) {
-  sortProjects(host);
+  sortWorkspaceProjects(host);
+  sortProjectsPaths(host);
   await formatFiles(host);
 }
