@@ -10,7 +10,29 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "directory": {
+      "type": "string",
+      "description": "Name of Library root directory",
+      "x-prompt": {
+        "message": "In which directory should we install it?",
+        "type": "list",
+        "items": [
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          },
+          {
+            "value": "api",
+            "label": "api"
+          }
+        ]
+      }
     }
   },
-  "required": ["name"]
+  "required": ["name", "directory"]
 }
