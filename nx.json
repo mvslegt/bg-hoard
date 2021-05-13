@@ -1,7 +1,7 @@
 {
   "npmScope": "bg-hoard",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -30,6 +30,9 @@
       "tags": []
     },
     "store-util-formatters": {
+      "tags": []
+    },
+    "store-feature-game-detail": {
       "tags": []
     }
   }
