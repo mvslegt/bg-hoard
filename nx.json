@@ -28,6 +28,9 @@
     },
     "store-shared-ui": {
       "tags": []
+    },
+    "store-util-formatters": {
+      "tags": []
     }
   }
 }
