@@ -26,29 +26,29 @@
   },
   "projects": {
     "store": {
-      "tags": []
+      "tags": ["scope:store", "type:app"]
     },
     "store-e2e": {
-      "tags": [],
+      "tags": ["scope:store", "type:e2e"],
       "implicitDependencies": ["store"]
     },
     "store-shared-ui": {
-      "tags": []
+      "tags": ["scope:store", "type:ui"]
     },
     "store-util-formatters": {
-      "tags": []
+      "tags": ["scope:store", "type:util"]
     },
     "store-feature-game-detail": {
-      "tags": []
+      "tags": ["scope:store", "type:feature"]
     },
     "api": {
-      "tags": []
+      "tags": ["scope:api", "type:app"]
     },
     "util-interface": {
-      "tags": []
+      "tags": ["scope:shared", "type:util"]
     },
     "store-shared-ui-e2e": {
-      "tags": [],
+      "tags": ["scope:store", "type:e2e"],
       "implicitDependencies": ["store-shared-ui"]
     }
   }

@@ -1,4 +1,4 @@
-import { text, number, boolean } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { HeaderComponent } from './header.component';
 //IMPORT TOOLBAR MODULE
 import { MatToolbarModule } from '@angular/material/toolbar';
