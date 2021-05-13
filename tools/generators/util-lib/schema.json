@@ -15,7 +15,7 @@
       "type": "string",
       "description": "Name of Library root directory",
       "x-prompt": {
-        "message": "In which directory should we install it?",
+        "message": "The scope of your lib.",
         "type": "list",
         "items": [
           {

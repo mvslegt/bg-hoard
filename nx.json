@@ -50,6 +50,9 @@
     "store-shared-ui-e2e": {
       "tags": ["scope:store", "type:e2e"],
       "implicitDependencies": ["store-shared-ui"]
+    },
+    "api-util-notifications": {
+      "tags": ["scope:api", "type:util"]
     }
   }
 }
