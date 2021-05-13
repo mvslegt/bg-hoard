@@ -8,7 +8,9 @@
     "scripts": {
       "check:*": "*"
     },
-    "styles/**/*.css": ["store"],
+    "styles/**/*.css": [
+      "store"
+    ],
     ".eslintrc.json": "*"
   },
   "affected": {
@@ -17,7 +19,7 @@
   "npmScope": "bg-hoard",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
           "build",
@@ -25,39 +27,73 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "accessToken": "NTRmMjczNGEtMTdlOC00NTBjLTk5MGYtZTU4ODI1OTQ5ZmYzfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
   "projects": {
     "store": {
-      "tags": ["scope:store", "type:app"]
+      "tags": [
+        "scope:store",
+        "type:app"
+      ]
     },
     "store-e2e": {
-      "tags": ["scope:store", "type:e2e"],
-      "implicitDependencies": ["store"]
+      "tags": [
+        "scope:store",
+        "type:e2e"
+      ],
+      "implicitDependencies": [
+        "store"
+      ]
     },
     "store-shared-ui": {
-      "tags": ["scope:store", "type:ui"]
+      "tags": [
+        "scope:store",
+        "type:ui"
+      ]
     },
     "store-util-formatters": {
-      "tags": ["scope:store", "type:util"]
+      "tags": [
+        "scope:store",
+        "type:util"
+      ]
     },
     "store-feature-game-detail": {
-      "tags": ["scope:store", "type:feature"]
+      "tags": [
+        "scope:store",
+        "type:feature"
+      ]
     },
     "api": {
-      "tags": ["scope:api", "type:app"]
+      "tags": [
+        "scope:api",
+        "type:app"
+      ]
     },
     "util-interface": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     },
     "store-shared-ui-e2e": {
-      "tags": ["scope:store", "type:e2e"],
-      "implicitDependencies": ["store-shared-ui"]
+      "tags": [
+        "scope:store",
+        "type:e2e"
+      ],
+      "implicitDependencies": [
+        "store-shared-ui"
+      ]
     },
     "api-util-notifications": {
-      "tags": ["scope:api", "type:util"]
+      "tags": [
+        "scope:api",
+        "type:util"
+      ]
     }
   }
 }
