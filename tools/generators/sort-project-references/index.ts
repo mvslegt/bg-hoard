@@ -1,13 +1,19 @@
 import { formatFiles, Tree, updateJson } from '@nrwl/devkit';
 
-function setDefaultProject(host: Tree) {
+function sortProjects(host: Tree) {
   updateJson(host, 'workspace.json', (json) => {
-    json.defaultProject = 'api';
+    const sortedProjects = Object.keys(json.projects)
+      .sort()
+      .reduce((obj, key) => {
+        obj[key] = json.projects[key];
+        return obj;
+      }, {});
+    json.projects = sortedProjects;
     return json;
   });
 }
 
 export default async function (host: Tree) {
-  setDefaultProject(host);
+  sortProjects(host);
   await formatFiles(host);
 }
