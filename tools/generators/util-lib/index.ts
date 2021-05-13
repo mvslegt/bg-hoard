@@ -5,7 +5,7 @@ export default async function (host: Tree, schema: any) {
   await libraryGenerator(host, {
     name: 'util-' + schema.name,
     directory: schema.directory,
-    tags: 'type:util',
+    tags: `scope:${schema.directory},type:util`,
   });
   await formatFiles(host);
   return () => {
