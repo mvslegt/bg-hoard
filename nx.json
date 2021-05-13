@@ -38,7 +38,7 @@
     "api": {
       "tags": []
     },
-    "api-util-interface": {
+    "util-interface": {
       "tags": []
     }
   }
